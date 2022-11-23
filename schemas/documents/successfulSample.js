@@ -47,7 +47,12 @@ export default {
       description: "Please upload visa image",
       validation: (Rule) => Rule.required(),
     },
-    { type: "string", name: "postText", title: "text" },
+    {
+      type: "string",
+      name: "postText",
+      title: "text",
+      validation: (Rule) => Rule.min(10).max(50).required(),
+    },
   ],
 
   preview: {
