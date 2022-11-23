@@ -1,7 +1,7 @@
 export default {
   type: "document",
   name: "videos",
-  title: "videos",
+  title: "Videos",
   liveEdit: true,
   fields: [
     {
@@ -17,10 +17,8 @@ export default {
       },
       validation: (Rule) => Rule.required(),
     },
-    { type: "number", name: "id", title: "ID" },
-    { type: "string", name: "url" },
+    { type: "string", name: "id", title: "Embed ID" },
     // { type: "richText", name: "texts" },
     { type: "string", name: "description" },
   ],
-  preview: { select: { title: "id" } },
 };
