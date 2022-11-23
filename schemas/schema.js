@@ -15,6 +15,8 @@ import siteConfig from "./siteConfig";
 import navItem from "./objects/navItem";
 import navigation from "./documents/navigation";
 import link from "./objects/link";
+import sliders from "./documents/sliders";
+import footer from "./documents/footer";
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -37,5 +39,7 @@ export default createSchema({
     navItem,
     navigation,
     link,
+    sliders,
+    footer,
   ]),
 });
