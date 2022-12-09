@@ -16,7 +16,8 @@ export default {
     {
       name: "myTags",
       title: "Tags",
-      type: "tags",
+      type: "reference",
+      to: { type: "tags" },
       // options: {
       //   includeFromRelated: "myTags",
       // },
