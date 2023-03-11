@@ -1,8 +1,10 @@
+// import client from "part:@sanity/base/client";
+
 export default {
   type: "document",
   title: "Posts",
   name: "posts",
-  liveEdit: true,
+  // liveEdit: true,
   fields: [
     {
       type: "string",
@@ -16,11 +18,9 @@ export default {
     {
       name: "myTags",
       title: "Tags",
-      type: "reference",
-      to: { type: "tags" },
-      // options: {
-      //   includeFromRelated: "myTags",
-      // },
+      type: "array",
+      of: [{ type: "reference", to: { type: "tags" } }],
+      validation: (Rule) => Rule.required().max(2),
     },
     {
       type: "image",
@@ -30,10 +30,4 @@ export default {
     },
     { type: "richText", name: "postContent" },
   ],
-  // preview: {
-  //   select: {
-  //     title: "title",
-  //     subtitle: "postText",
-  //   },
-  // },
 };

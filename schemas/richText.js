@@ -1,32 +1,37 @@
 export default {
   name: "richText",
   type: "array",
+  title: "Content",
   liveEdit: true,
   of: [
     {
       type: "block",
+      title: "Block",
       marks: {
         annotations: [
           {
-            name: "internalLink",
+            name: "link",
             type: "object",
-            title: "Internal Link",
+            title: "URL",
             fields: [
               {
-                name: "reference",
-                type: "reference",
-                title: "Reference",
-                to: [{ type: "posts" }],
+                name: "href",
+                type: "url",
+                title: "URL",
+              },
+              {
+                title: "Open in new tab",
+                name: "blank",
+                // description: "Read https://css-tricks.com/use-target_blank/",
+                type: "boolean",
               },
             ],
           },
         ],
       },
-
-      // of: [{ type: "reference", title: "Author", to: [{ type: "author" }] }],
     },
     // { type: "figure" },
     { type: "mainImage" },
-    { type: "video" },
+    // { type: "video" },
   ],
 };
