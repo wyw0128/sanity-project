@@ -5,7 +5,6 @@ import createSchema from "part:@sanity/base/schema-creator";
 import schemaTypes from "all:part:@sanity/base/schema-type";
 import richText from "./richText";
 import image from "./objects/image";
-import video from "./objects/video";
 import videos from "./documents/videos";
 import successfulSample from "./documents/successfulSample";
 import posts from "./documents/posts";
@@ -25,11 +24,8 @@ export default createSchema({
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
     /* Your types here! */
-    // animal,
-    // author,
     richText,
     image,
-    video,
     videos,
     successfulSample,
     posts,
