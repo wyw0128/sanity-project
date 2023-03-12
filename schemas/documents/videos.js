@@ -2,6 +2,8 @@ export default {
   type: "document",
   name: "videos",
   title: "Videos",
+  // disable creating new documents in the Studio
+  __experimental_actions: ["update", "publish"],
   liveEdit: true,
   fields: [
     {
@@ -17,7 +19,12 @@ export default {
       },
       validation: (Rule) => Rule.required(),
     },
-    { type: "string", name: "id", title: "Embed ID" },
+    {
+      type: "string",
+      name: "id",
+      title: "Embed ID",
+      description: "仅支持西瓜视频ID",
+    },
     // { type: "richText", name: "texts" },
     { type: "string", name: "description" },
   ],

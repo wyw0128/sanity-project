@@ -11,7 +11,7 @@ export default {
     {
       name: "externalUrl",
       type: "link",
-      title: "External URL",
+      title: "URL",
     },
   ],
 };

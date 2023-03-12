@@ -16,7 +16,7 @@ export default {
     {
       name: "externalUrl",
       title: "External URL",
-      description: "Use fully qualified URLS for external link",
+      description: "Use fully qualified URLs for external link",
       type: "url",
     },
   ],

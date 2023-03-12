@@ -9,12 +9,10 @@ import videos from "./documents/videos";
 import successfulSample from "./documents/successfulSample";
 import posts from "./documents/posts";
 import tags from "./documents/tags";
-import page from "./page";
-import siteConfig from "./siteConfig";
 import navItem from "./objects/navItem";
-import navigation from "./documents/navigation";
 import link from "./objects/link";
 import sliders from "./documents/sliders";
+import siteSettings from "./siteSettings";
 import footer from "./documents/footer";
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -30,10 +28,8 @@ export default createSchema({
     successfulSample,
     posts,
     tags,
-    page,
-    siteConfig,
     navItem,
-    navigation,
+    siteSettings,
     link,
     sliders,
     footer,
